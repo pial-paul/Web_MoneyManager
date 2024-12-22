@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income</title>
+    <link rel="stylesheet" href="income-expense.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">Money Manager</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="income.html">Income</a>
+        <a href="expense.html">Expense</a>
+        <a href="transaction.html">Transaction</a>
+        <a href="settings.html">Settings</a>
+        <a href="signin.html">Profile</a>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <h2>Income Records</h2>
+      <div class="controls">
+        <input
+          type="text"
+          id="search-income"
+          placeholder="Search Income"
+          onkeyup="filterTable('income-table', 'search-income')"
+        />
+        <button onclick="sortTable('income-table', 0)">Sort by Date</button>
+      </div>
+      <table id="income-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Income rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="income-expense.js"></script>
+    <script>
+      // Sample Data for Income
+      const incomeData = [
+        { date: "2024-12-01", amount: "500", description: "Salary" },
+        { date: "2024-12-02", amount: "200", description: "Freelancing" },
+        { date: "2024-11-28", amount: "100", description: "Gift" },
+      ];
+
+      loadTable("income-table", incomeData);
+    </script>
+  </body>
+</html>

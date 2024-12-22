@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense</title>
+    <link rel="stylesheet" href="income-expense.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">Money Manager</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="income.html">Income</a>
+        <a href="expense.html">Expense</a>
+        <a href="transaction.html">Transaction</a>
+        <a href="settings.html">Settings</a>
+        <a href="signin.html">Profile</a>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <h2>Expense Records</h2>
+      <div class="controls">
+        <input
+          type="text"
+          id="search-expense"
+          placeholder="Search Expense"
+          onkeyup="filterTable('expense-table', 'search-expense')"
+        />
+        <button onclick="sortTable('expense-table', 0)">Sort by Date</button>
+      </div>
+      <table id="expense-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Expense rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="income-expense.js"></script>
+    <script>
+      // Sample Data for Expenses
+      const expenseData = [
+        { date: "2024-12-01", amount: "100", description: "Groceries" },
+        { date: "2024-11-30", amount: "50", description: "Transport" },
+        { date: "2024-11-29", amount: "150", description: "Utilities" },
+      ];
+
+      loadTable("expense-table", expenseData);
+    </script>
+  </body>
+</html>

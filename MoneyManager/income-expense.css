@@ -1,0 +1,103 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a;
+    color: #ffffff;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e293b;
+    padding: 10px 20px;
+  }
+  
+  .navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #38bdf8;
+  }
+  
+  .navbar .nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #38bdf8;
+  }
+  
+  /* Container Styling */
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e293b;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  h2 {
+    color: #38bdf8;
+    text-align: center;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .controls input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #334155;
+    color: #ffffff;
+    width: 70%;
+  }
+  
+  .controls button {
+    background-color: #38bdf8;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .controls button:hover {
+    background-color: #0ea5e9;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  thead {
+    background-color: #334155;
+  }
+  
+  thead th {
+    padding: 10px;
+    text-align: left;
+    color: #94a3b8;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #2e3a48;
+  }
+  
+  tbody td {
+    padding: 10px;
+  }
+  

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transactions</title>
+    <link rel="stylesheet" href="income-expense.css" />
+  </head>
+  <body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar">
+      <div class="logo">Money Manager</div>
+      <div class="nav-links">
+        <a href="index.php">Home</a>
+        <a href="income.html">Income</a>
+        <a href="expense.html">Expense</a>
+        <a href="transaction.html">Transaction</a>
+        <a href="settings.html">Settings</a>
+        <a href="signin.html">Profile</a>
+      </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+      <h2>Transaction Records</h2>
+      <div class="controls">
+        <input
+          type="text"
+          id="search-transaction"
+          placeholder="Search Transactions"
+          onkeyup="filterTable('transaction-table', 'search-transaction')"
+        />
+        <button onclick="sortTable('transaction-table', 0)">
+          Sort by Date
+        </button>
+      </div>
+      <table id="transaction-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Transaction rows will be dynamically added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <script src="income-expense.js"></script>
+    <script>
+      // Sample Data for Transactions
+      const transactionData = [
+        {
+          date: "2024-12-01",
+          type: "Income",
+          amount: "500",
+          description: "Salary",
+        },
+        {
+          date: "2024-12-02",
+          type: "Expense",
+          amount: "100",
+          description: "Groceries",
+        },
+        {
+          date: "2024-11-30",
+          type: "Income",
+          amount: "200",
+          description: "Freelancing",
+        },
+        {
+          date: "2024-11-29",
+          type: "Expense",
+          amount: "50",
+          description: "Transport",
+        },
+      ];
+
+      loadTable("transaction-table", transactionData);
+    </script>
+  </body>
+</html>
